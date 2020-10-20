@@ -2,7 +2,7 @@ def preprocess(df, test=False):
     # Unnecessay columns to drop
     columns_to_drop = ['sofifa_id', 'player_url', 'short_name', 'long_name', 'dob', 'potential', 'real_face', 'loaned_from', 
                        'nation_jersey_number', 'joined', 'nationality', 'club', 'potential', 'player_tags', 
-                       'team_jersey_number', 'player_traits', 'nation_position' ]
+                       'team_jersey_number', 'player_traits', 'nation_position', 'team_position' ]
     if test:
         columns_to_drop.remove('club')
         columns_to_drop.remove('short_name')
@@ -21,7 +21,7 @@ def preprocess(df, test=False):
     from sklearn.impute import SimpleImputer
     # fill missing values for given columns using their mode
     imp = SimpleImputer(strategy='most_frequent')
-    mode_cols = ['release_clause_eur', 'team_position', 'contract_valid_until']
+    mode_cols = ['release_clause_eur', 'contract_valid_until']
 
     fifa_dropped[mode_cols] = imp.fit_transform(fifa_dropped[mode_cols])
 
