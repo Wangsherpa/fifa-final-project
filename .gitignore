@@ -1,5 +1,6 @@
 # Data Folder
 data/
+fifa_env/
 # Unnecessary Folders
 .ipynb_checkpoints/
 .local/

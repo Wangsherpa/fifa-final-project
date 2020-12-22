@@ -1,4 +1,4 @@
-# Let's play Fifa!
+# Let's play Fifa! (Team Project)
 AI-1 Project: Univ.ai (Master AI &amp; DSE)
 
 # Problem Statement
